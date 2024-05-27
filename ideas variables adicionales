@@ -1,1 +1,76 @@
 
+El problema ha resolver, es que tenemos en nuestra base datos muy pocas variables, y ocupamos agregar nuevas variables categoricas o binarias,
+y numericas especialmente, ya que no tenemos variables numericas, ya sea creandolas con las mismas que ya tenemos o agregando de otras fuentes 
+externas. Se pedira que hagamos un algoritmo supervisado y otro no supervisado, por lo que tambien necesitamos tener y una variable objetivo.
+
+
+TENEMOS LAS VARIABLES:
+
+• Date of Designation: Variable tipo DATE, en el formato %B %d, %Y (nombre del 
+                       mes completo - número de día ## - número de año ####), representa la fecha 
+                       en la que se designó oficialmente como un ataque terrorista. 
+
+• City: Variable tipo STRING, indica la ciudad donde ocurrió el incidente. 
+
+• Country: Variable tipo STRING, indica el país donde ocurrió el incidente. 
+
+• Date of Incident: Variable tipo DATE, en el formato %B %d, %Y (nombre del mes 
+                    completo - número de día ## - número de año ####), representa la fecha en que 
+                    ocurrió el incidente. 
+
+• Description: Variable tipo STRING, hace una descripción corta sobre el tipo del 
+               ataque. 
+
+---------------------------------------------------------------------------------------
+*****
+POSIBLES VARIABLES A GENERAR (variables que podemos generar con estas mismas variables que ya tenemos) :
+
+
+Promedio_lapso_entre_ataques: Variable numérica, que nos da el promedio de la distancia de los dias entre un ataque y otro,
+                              en un mismo país(tomando 'date of incident')
+
+Frecuencia: variable categotica, que nos diga el nivel de peligro/frecuencia de ataqaues terroristas en el pais, hecha con base a la
+            variable creada 'Promedio_lapso_entre_ataques', se pueden categorizar en Alta, media, baja.
+
+Trimestre: variable categorica, que nos diga en que trimestre del año fue el ataque (1er,2do,2er,4to)
+
+Severidad: variable categorica, que nos diga mediante la forma del ataque(description) si el ataque fue de gravedad alta, media, o baja.
+           (Por ejemplo, bombas gravedad alta, disparos gravedad media, cuchillos gravedad baja)
+
+Capital: Variable binaria, que nos diga si la ciudad del ataque es la capital del pais.( posible dificultad, encontrar todas las capitales en
+         otras bases de datos externas, sobre los paises que tenemos en nuestra base de datos)
+
+*****
+POSIBLES VARIABLES A TRANSFORMAR (variables que podemos transformar de estas mismas variables que ya tenemos) :
+
+
+Description: esta variable tiene el tipo de ataque que fue, bomba, cuchillos, disparos, etc.
+
+
+*****
+POSIBLES VARIABLES A AGREGAR (variables que podriamos agregar de otras fuentes y bases de datos externas, algunas de ellas podrian ser algo mas dificil conseguirlas) :
+
+
+Poblacion_pais: Variable numerica que nos da la cantidad de poblacion de la ciudad donde ocurrio el ataque. ( posible dificultad: Tendria que corresponder a la poblacion del 
+                respectivo año del incidente, si esque hay, ya que los paises suelen hacer censos cada cierto numero de años, o bien se podria poner
+                la cantidad de poblacion del ultimo censo encontrado, podria ser laborioso encontrar todos estos censos de cada pais y años)
+
+Poblacion_ciudad: Variable numerica que nos da la cantidad de poblacion de la ciudad donde ocurrio el ataque. ( posible dificultad: Tendria que corresponder a la poblacion del 
+                  respectivo año del incidente, si esque hay, ya que los paises suelen hacer censos cada cierto numero de años, o bien se podria poner
+                  la cantidad de poblacion del ultimo censo encontrado, podria ser laborioso encontrar todos estos censos de cada ciudad y años)
+
+PIB: variable numerica, el PIB del pais nos podria dar un contexto de económico que podria contener alguna relacion entre las frecuencias y gravedad de los ataques. 
+     (posible dificultad, encontrar los PIB en bases de datos externas y en los respectivos años del ataque)
+
+Tasa_criminalidad: variable numerica, contiene la tasa de criminalidad del pais(posible dificultad, encontrar las tasas de criminalidad para cada pais en bases de datos 
+                   externas y en los respectivos años del ataque)
+
+muertos_ataque: Variable numerica, cuantos muertos hubo por ataque (dificultad muy alta para encontrar los muertos de cada ataque en la base de datos en fuentes externa,
+                quizas no posible)
+
+
+*****
+POSIBLE VARIABLE OBJETIVO (la variable objetivo que se utilizara para el modelo supervisado y el no supervisado):
+
+
+Severidad
