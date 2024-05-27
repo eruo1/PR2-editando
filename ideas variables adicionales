@@ -1,7 +1,7 @@
 
-El problema ha resolver, es que tenemos en nuestra base datos muy pocas variables, y ocupamos agregar nuevas variables categoricas o binarias,
+El problema ha resolver es que tenemos en nuestra base datos muy pocas variables, y ocupamos agregar nuevas variables categoricas o binarias,
 y numericas especialmente, ya que no tenemos variables numericas, ya sea creandolas con las mismas que ya tenemos o agregando de otras fuentes 
-externas. Se pedira que hagamos un algoritmo supervisado y otro no supervisado, por lo que tambien necesitamos tener y una variable objetivo.
+externas. Se pedira que hagamos un algoritmo supervisado y otro no supervisado, por lo que tambien necesitamos tener una variable objetivo.
 
 
 TENEMOS LAS VARIABLES:
