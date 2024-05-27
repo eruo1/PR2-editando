@@ -68,6 +68,9 @@ Tasa_criminalidad: variable numerica, contiene la tasa de criminalidad del pais(
 muertos_ataque: Variable numerica, cuantos muertos hubo por ataque (dificultad muy alta para encontrar los muertos de cada ataque en la base de datos en fuentes externa,
                 quizas no posible)
 
+religion_predominante: Variable categórica, nos dice la religion predominante en ese pais, puede dar contexto cultural y social y tener relaciones interesantes (posible dificultad,
+                       encontrar las religiones predominantes para cada pais en bases de datos externas y en los respectivos años del ataque)
+
 
 *****
 POSIBLE VARIABLE OBJETIVO (la variable objetivo que se utilizara para el modelo supervisado y el no supervisado):
